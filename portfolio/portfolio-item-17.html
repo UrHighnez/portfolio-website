@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j</krieg> Portfolio</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../img/jkriegLogoResized.png" alt="">
+        </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="navigation-btn"></span>
+    </button>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="../index.html#skills" class="nav__link">My capabilities</a></li>
+            <li class="nav__item"><a href="../index.html#about" class="nav__link">About me</a></li>
+            <li class="nav__item"><a href="../index.html#projects" class="nav__link">My projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Intro -->
+
+<section class="intro">
+    <h1 class="section__title section__title--intro">
+        <strong>VR Sailing Simulation</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">Pirates VRrr</p>
+    <img src="../img/portfolio-17.png" alt="" class="intro__img">
+</section>
+
+<div class="portfolio-item-individual">
+    <p>
+        Another exciting project I have been working on, is a sailing simulation in Virtual Reality, created with Unity
+        as a Game Engine and Blender for my models and animations.
+    </p>
+    <img src="../img/portfolio-17-details.gif" alt="" class="intro__img">
+    <p>
+        The biggest challenge was getting the waves to look and feel right. After a lot of fiddling around myself,
+        lacking the satisfying results, I found a very useful, royalty-free, Unity-plugin called
+        <a href="https://crest.readthedocs.io/en/latest/index.html">Crest</a>, which did a lot of the heavy
+        lifting. What this uses, opposing to my own attempts using Perlin-Noise, are so called Gerstner-waves, which
+        produce much more authentic results. More on this can be found
+        <a href="https://catlikecoding.com/unity/tutorials/flow/waves/">here</a>.
+    </p>
+    <img src="../img/proceduralIsland.gif" alt="" class="intro__img">
+    <p>
+        Another interesting part of this project was the generation of procedural islands.I will link the (german)
+        documentation of the project
+        <a href="https://docs.google.com/document/d/1jxEAXNh_Y9WL4xLsAhJAnsKqZyPgPayAJqBXzXwDwkM/edit?usp=sharing">here</a>.
+    </p>
+</div>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+    <a href="mailto:johannes-d.krieg@web.de" class="footer__link">johannes-d.krieg@web.de</a>
+    <ul class="social-list">
+        <li class="social-list__item"><a class="social-list__link" href="https://git.coco.study/jkrieg">
+            <img src="../icon/cdnlogo.com_th-koeln.svg" alt="" class="th-logo"></a></li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="http://linkedin.com/in/johannes-krieg">
+                <img src="../icon/linkedin-brands.svg" alt="" class="fa-linkedin"/></a></li>
+        <li class="social-list__item"><a class="social-list__link" href="https://github.com/UrHighnez">
+            <img src="../icon/github-brands.svg" alt="" class="fa-github"></a></li>
+        <li class="social-list__item"><a class="social-list__link"
+                                         href="https://www.youtube.com/channel/UCWKjYhF0S7hdZW37gXP3v3Q">
+            <img src="../icon/youtube-brands.svg" alt="" class="fa-youtube"></a></li>
+    </ul>
+</footer>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
