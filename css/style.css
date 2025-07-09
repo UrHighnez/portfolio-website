@@ -64,8 +64,8 @@ table {
     --fw-bold: 700;
 
     --clr-light: #d8d7d2;
-    --clr-dark: #13191c;
-    --clr-accent: #6691bf;
+    --clr-dark: #0d1f29;
+    --clr-accent: #43d2ec;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -140,7 +140,7 @@ strong {
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*Typography*/
@@ -189,7 +189,7 @@ ul {
 .section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-secondary), sans-serif;
     margin-bottom: 1em;
 }
 
@@ -214,8 +214,9 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--clr-dark) 30%, var(--clr-dark) 80%);
+    color: var(--clr-dark);
     top: 0;
     bottom: 0;
     left: 0;
@@ -230,10 +231,11 @@ header {
     list-style: none;
     display: flex;
     height: 100%;
+    width: 350px;
     flex-direction: column;
-    justify-content: space-evenly;
+    text-align: right;
     align-items: flex-start;
-    margin: 0;
+    margin: 50px;
     padding-left: 2em;
 }
 
@@ -254,13 +256,13 @@ header {
     border: 0;
     cursor: pointer;
     position: absolute;
-    right: 1em;
+    right: 2em;
     top: 1em;
     z-index: 1000;
 }
 
 .nav-open .nav {
-    transform: translateX(70%);
+    transform: translateX(75%);
 }
 
 .nav-open .nav-toggle {
@@ -280,8 +282,8 @@ header {
 }
 
 .navigation-btn {
-    display: block;
-    position: relative;
+    position: fixed;
+    transform: translate(-50%, -50%);
 }
 
 .navigation-btn,
@@ -509,7 +511,7 @@ header {
 /*Footer*/
 
 .footer {
-    background: #111;
+    background: var(--clr-dark);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
@@ -521,19 +523,19 @@ header {
     text-decoration: none;
 }
 
-.footer__link {
-    font-size: var(--fs-h3);
-    font-weight: var(--fw-reg);
-}
+/*.footer__link {*/
+/*    font-size: var(--fs-h3);*/
+/*    font-weight: var(--fw-reg);*/
+/*}*/
 
 .footer__link:hover,
 .social-list__link:hover {
     opacity: .7;
 }
 
-.footer__link:hover {
-    text-decoration: underline;
-}
+/*.footer__link:hover {*/
+/*    text-decoration: underline;*/
+/*}*/
 
 .social-list {
     display: flex;
