@@ -95,7 +95,7 @@ body {
     background: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
-    font-family: var(--ff-primary);
+    font-family: var(--ff-primary), serif;
     font-size: var(--fs-body);
     line-height: 1.6;
 }
@@ -218,19 +218,23 @@ header {
 
 .nav {
     position: fixed;
-    background: #ffffff;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--clr-dark) 30%, var(--clr-dark) 80%);
-    color: #ffffff;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 100;
 
-    min-width: fit-content;
+    top: 0;
+    bottom: 0;
+    right: -350px;
 
-    transform: translateX(100%);
+    width: 350px;
+    /*max-width: fit-content;*/
+    /*min-width: min-content;*/
+
+    /*transform: translateX(100%);*/
+
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+
+    color: #ffffff;
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--clr-dark) 70%, var(--clr-dark) 90%);
 }
 
 .nav__list {
@@ -268,7 +272,7 @@ header {
 }
 
 .nav-open .nav {
-    transform: translateX(75%);
+    right: 0;
 }
 
 .nav-open .nav-toggle {
