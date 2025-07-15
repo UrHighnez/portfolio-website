@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ol, ul {
@@ -63,8 +64,8 @@ table {
     --fw-reg: 300;
     --fw-bold: 700;
 
-    --clr-light: #d8d7d2;
-    --clr-dark: #0d1f29;
+    --clr-bg: #d8d7d2;
+    --clr-text: #0d1f29;
     --clr-accent: #43d2ec;
 
     --fs-h1: 3rem;
@@ -74,6 +75,12 @@ table {
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+html[data-theme="dark"] {
+    --clr-bg: #0d1f29;
+    --clr-text: #d8d7d2;
+    --clr-accent: #1f6571;
 }
 
 @media (min-width: 800px) {
@@ -89,11 +96,12 @@ table {
 
 html {
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-bg);
+    color: var(--clr-text);
     margin: 0;
     font-family: var(--ff-primary), serif;
     font-size: var(--fs-body);
@@ -129,7 +137,7 @@ strong {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-text);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -141,6 +149,14 @@ strong {
 
 .btn:hover {
     transform: scale(1.05);
+}
+
+
+#theme-toggle {
+    color: var(--clr-text);
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
 }
 
 /*Typography*/
@@ -234,7 +250,7 @@ header {
 
     color: #ffffff;
     background: #ffffff;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--clr-dark) 70%, var(--clr-dark) 90%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--clr-bg) 70%, var(--clr-bg) 90%);
 }
 
 .nav__list {
@@ -250,7 +266,7 @@ header {
 }
 
 .nav__link {
-    color: inherit;
+    color: var(--clr-text);
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
     text-decoration: none;
@@ -333,7 +349,7 @@ header {
 
 .typed-out {
     overflow: hidden;
-    border-right: .1em solid var(--clr-dark);
+    border-right: .1em solid var(--clr-bg);
     white-space: nowrap;
     animation: typing 0.8s steps(8, end) forwards,
     blinking .75s infinite;
@@ -354,7 +370,7 @@ header {
         border-color: transparent
     }
     to {
-        border-color: var(--clr-dark);
+        border-color: var(--clr-text);
     }
 }
 
@@ -392,18 +408,18 @@ header {
 }
 
 .elementor-shape {
-    fill: var(--clr-light);
+    fill: var(--clr-bg);
     background-color: var(--clr-accent);
 }
 
 /*My Skills Section*/
 
 .my-skills {
-    background-color: var(--clr-dark);
+    background-color: #0d1f29;
     background-image: url(../img/skills.png);
     background-size: cover;
     background-blend-mode: multiply;
-    color: var(--clr-light);
+    color: #d8d7d2;
     text-align: center;
 }
 
@@ -418,7 +434,7 @@ header {
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: #d8d7d2;
     opacity: 0.25;
 }
 
@@ -488,8 +504,8 @@ header {
 /*My Projects Section*/
 
 .my-projects {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
     text-align: center;
 }
 
@@ -522,7 +538,7 @@ header {
 /*Footer*/
 
 .footer {
-    background: var(--clr-dark);
+    background: var(--clr-bg);
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
@@ -581,7 +597,7 @@ header {
 }
 
 .portfolio-item-individual__vid-container {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-bg);
     padding: 2em;
 }
 
