@@ -327,7 +327,7 @@ header {
 
 .typed-out {
     overflow: hidden;
-    border-right: .1em solid var(--clr-accent);
+    border-right: .1em solid var(--clr-dark);
     white-space: nowrap;
     animation: typing 0.8s steps(8, end) forwards,
     blinking .75s infinite;
@@ -348,14 +348,12 @@ header {
         border-color: transparent
     }
     to {
-        border-color: var(--clr-accent);
+        border-color: var(--clr-dark);
     }
 }
 
 .intro__img {
-    box-shadow: var(--bs);
     margin: 1.5em auto;
-
 }
 
 @media (min-width: 600px) {
@@ -379,7 +377,7 @@ header {
 }
 
 .section__subtitle--intro {
-    align-self: start;
+    align-self: end;
     grid-column: -1 / 1;
     grid-row: 2;
     text-align: right;
