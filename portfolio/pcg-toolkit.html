@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j</krieg> Portfolio</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../img/jkriegLogoResized.png" alt="">
+        </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="navigation-btn"></span>
+    </button>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="../index.html#skills" class="nav__link">My capabilities</a></li>
+            <li class="nav__item"><a href="../index.html#about" class="nav__link">About me</a></li>
+            <li class="nav__item"><a href="../index.html#projects" class="nav__link">My projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Intro -->
+
+<section class="intro">
+    <h1 class="section__title section__title--intro">
+        <strong>Procedural Map Generation</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">My Bachelor’s Thesis</p>
+    <img src="../img/pcg-toolkit.png" alt="" class="intro__img">
+</section>
+
+<div class="portfolio-item-individual">
+    <p>
+        In this project, I developed a modular toolkit for the procedural generation of 2D tile-based maps and conducted
+        a scientific comparison of three discrete generation methods:
+    </p>
+    <ul>
+        <li>Multi-Layered Cellular Automata (MLCA) – rule-based and iterative</li>
+        <li>Perlin Noise – stochastic and continuous</li>
+        <li>Wave Function Collapse (WFC) – constraint-based and structured</li>
+    </ul>
+    <br>
+    <p>
+        The backend was implemented in Go, with an interactive browser frontend in JavaScript. The system includes
+        real-time analysis of key metrics such as entropy, clustering, autocorrelation, and frequency distribution.
+    </p>
+    <img src="../img/pcg-toolkit-details.gif" alt="" class="intro__img">
+    <p>
+        To ensure comparability, all algorithms operate on standardized input (25×25 grids, 8 terrain types, fixed
+        seeds). Seven quantitative metrics were used to evaluate visual diversity, coherence, and structural complexity.
+        <br>
+        Key findings:
+        Each method excels in different areas: MLCA offers high controllability, Perlin produces natural transitions,
+        and WFC yields diverse results—but with higher computational cost. Hybrid combinations show strong potential.
+        <br>
+        Contribution:
+        A reproducible framework for evaluating and comparing procedural generators—complete with visual output,
+        interactive tooling, and scientific documentation.
+    </p>
+</div>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+    <ul class="social-list">
+        <li class="social-list__item"><a class="social-list__link" href="mailto:johannes-d.krieg@web.de">
+            <img src="../icon/email-button.svg" alt="" class="mail-to"></a></li>
+        <li class="social-list__item"><a class="social-list__link" href="https://git.coco.study/jkrieg">
+            <img src="../icon/cdnlogo.com_th-koeln.svg" alt="" class="th-logo"></a></li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="http://linkedin.com/in/johannes-krieg">
+                <img src="../icon/linkedin-brands.svg" alt="" class="fa-linkedin"/></a></li>
+        <li class="social-list__item"><a class="social-list__link" href="https://github.com/UrHighnez">
+            <img src="../icon/github-brands.svg" alt="" class="fa-github"></a></li>
+        <li class="social-list__item"><a class="social-list__link"
+                                         href="https://www.youtube.com/channel/UCWKjYhF0S7hdZW37gXP3v3Q">
+            <img src="../icon/youtube-brands.svg" alt="" class="fa-youtube"></a></li>
+    </ul>
+</footer>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
