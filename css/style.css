@@ -216,7 +216,7 @@ header {
     position: fixed;
     background: #ffffff;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--clr-dark) 30%, var(--clr-dark) 80%);
-    color: var(--clr-dark);
+    color: #ffffff;
     top: 0;
     bottom: 0;
     left: 0;
@@ -255,7 +255,7 @@ header {
     background: transparent;
     border: 0;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 2em;
     top: 1em;
     z-index: 1000;
@@ -283,7 +283,9 @@ header {
 
 .navigation-btn {
     position: fixed;
-    transform: translate(-50%, -50%);
+    top: 1.7em;
+    right: 1.7em;
+    transform: none;
 }
 
 .navigation-btn,
@@ -348,7 +350,8 @@ header {
 
 .intro__img {
     box-shadow: var(--bs);
-    margin: 1.5em;
+    margin: 1.5em auto;
+
 }
 
 @media (min-width: 600px) {
@@ -571,4 +574,11 @@ header {
 .portfolio-item-individual__vid-container {
     background-color: var(--clr-dark);
     padding: 2em;
+}
+
+.portfolio-item-individual__vid-container video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+
 }
