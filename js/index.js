@@ -48,3 +48,59 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     });
 });
+
+// Portfolio SLider
+function initSlider() {
+    const slider = document.getElementById('slider');
+    if (!slider) return;
+
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    if (slides.length === 0) return;
+
+    let current = 0;
+    const AUTO_MS = 5000;
+    let autoId = null;
+
+    const show = i => slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    const go = d => {
+        current = (current + d + slides.length) % slides.length;
+        show(current);
+    };
+
+    const nextBtn = document.querySelector('.portfolio-nav.right');
+    const prevBtn = document.querySelector('.portfolio-nav.left');
+
+    const start = () => {
+        clearInterval(autoId);
+        autoId = setInterval(() => go(1), AUTO_MS);
+    };
+    const stop = () => {
+        clearInterval(autoId);
+        autoId = null;
+    };
+
+    nextBtn?.addEventListener('click', e => {
+        e.preventDefault();
+        go(1);
+        start();
+    });
+    prevBtn?.addEventListener('click', e => {
+        e.preventDefault();
+        go(-1);
+        start();
+    });
+
+    slider.addEventListener('mouseenter', stop);
+    slider.addEventListener('mouseleave', start);
+
+    show(current);
+    start();
+
+    console.debug('slides gefunden:', slides.length);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSlider);
+} else {
+    initSlider();
+}

@@ -53,65 +53,112 @@
 <!-- My Projects -->
 
 <section class="my-projects" id="projects">
-    <h2 class="section__title section__title--projects">My Projects</h2>
-    <p class="section__subtitle section__subtitle--projects">A selection of my favourite, visually appealing
-        projects</p>
+    <h2 class="section__title section__title--projects">My Work</h2>
+    <p class="section__subtitle section__subtitle--projects">A selection from my favorite projects</p>
 
-    <div class="portfolio">
-        <a href="portfolio/pcg-toolkit.html" class="portfolio__item">
-            <img src="img/pcg-toolkit.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/vr-sailing.html" class="portfolio__item">
-            <img src="img/vr-sailing.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/vr-showroom.html" class="portfolio__item">
-            <img src="img/vr-showroom.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/emission-impossible.html" class="portfolio__item">
-            <img src="img/emission-impossible.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/klatschmuhle.html" class="portfolio__item">
-            <img src="img/klatschmühle.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/furniture.html" class="portfolio__item">
-            <img src="img/furniture.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/dal-segno.html" class="portfolio__item">
-            <img src="img/dal-segno.jpg" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/death-toll-radio.html" class="portfolio__item">
-            <img src="img/death-toll-radio.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/mortal-kontext.html" class="portfolio__item">
-            <img src="img/mortal-kontext.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/blender-mapgen.html" class="portfolio__item">
-            <img src="img/blender-mapgen.jpg" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio/hexagonal-mapgen.html" class="portfolio__item">
-            <img src="img/hexagonal-mapgen.jpg" alt="" class="portfolio__img">
-        </a>
-        <!--        <a href="portfolio/study-space.html" class="portfolio__item">-->
-        <!--            <img src="img/study-space.png" alt="" class="portfolio__img">-->
-        <!--        </a>-->
-        <!--        <a href="portfolio/dancing-numbers.html" class="portfolio__item">-->
-        <!--            <img src="img/dancing-numbers.png" alt="" class="portfolio__img">-->
-        <!--        </a>-->
-        <!--        <a href="portfolio/generative-impressionator.html" class="portfolio__item">-->
-        <!--            <img src="img/generative-impressionator.png" alt="" class="portfolio__img">-->
-        <!--        </a>-->
-        <!--        <a href="portfolio/zeppelin.html" class="portfolio__item">-->
-        <!--            <img src="img/zeppelin.png" alt="" class="portfolio__img">-->
-        <!--        </a>-->
-        <!--        <a href="portfolio/mixed-marble-arts.html" class="portfolio__item">-->
-        <!--            <img src="img/mixed-marble-arts.png" alt="" class="portfolio__img">-->
-        <!--        </a>-->
-        <!--        <a href="portfolio/door-lock.html" class="portfolio__item">-->
-        <!--            <img src="img/door-lock.jpg" alt="" class="portfolio__img">-->
-        <!--        </a>-->
-        <!--        <a href="portfolio/solarionopram.html" class="portfolio__item">-->
-        <!--            <img src="img/solarionopram.jpg" alt="" class="portfolio__img">-->
-        <!--        </a>-->
+    <div id="slider">
+        <div class="slider-container">
+            <a href="portfolio/pcg-toolkit.html" class="slide active"
+               style="background-image: url('img/pcg-toolkit-details.gif');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>PCG Toolkit</h3>
+                        <p>A toolkit for procedurally generating 2D landscapes that I created for my Bachelor's
+                            thesis.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/vr-sailing.html" class="slide"
+               style="background-image: url('img/vr-sailing-details.gif');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>VR Sailing Simulation</h3>
+                        <p>A sailing simulation in Virtual Reality, created with Unity for the Oculus Quest.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/vr-showroom.html" class="slide"
+               style="background-image: url('img/vr-showroom.gif');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Showroom for World of VR</h3>
+                        <p>A university project in cooperation with a company that develops a training app in Virtual
+                            Reality.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/furniture.html" class="slide"
+               style="background-image: url('img/furniture-details.gif');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Study space design</h3>
+                        <p>As part of our study program, we designed the interior space for our students needs through
+                            various artifacts.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/electrical-engineering.html" class="slide"
+               style="background-image: url('img/dal-segno.gif');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Electrical engineering</h3>
+                        <p>I have created various physical prototypes, including a musical instrument glove, an artistic
+                            death toll radio, a remote controlled zeppelin and an automatic door lock.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/mixed-marble-arts.html" class="slide"
+               style="background-image: url('img/mixed-marble-arts.png');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Mixed marble arts</h3>
+                        <p>Experimenting with the JavaScript framework p5, various artifacts have been created,
+                            including a game where players control a moving circle with the gyroscope of their
+                            phone.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/mortal-kontext.html" class="slide"
+               style="background-image: url('img/mortal-kontext.png');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Mortal Kontext</h3>
+                        <p>A prototype for a simple fighting game created with Unity and blender.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/3d-mapgeneration.html" class="slide"
+               style="background-image: url('img/blender-mapgen.jpg');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>3D map generation</h3>
+                        <p>Using Unity and Blender, I have created multiple map generation tools making use of different
+                            techniques.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/klatschmuhle.html" class="slide"
+               style="background-image: url('img/klatschmühle.png');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Klatschmühle</h3>
+                        <p>A web application to watch and react to the livestream of the shiny toys festival remotely
+                            during the covid pandemic.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="portfolio/emission-impossible.html" class="slide"
+               style="background-image: url('img/emission-impossible.png');">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Emission Impossible</h3>
+                        <p>An Android app that tracks your emissions using various ways of transportation.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <button class="portfolio-nav left" onclick="prevSlide()" aria-label="Previous slide">❮</button>
+        <button class="portfolio-nav right" onclick="nextSlide()" aria-label="Next slide">❯</button>
     </div>
 </section>
 
@@ -152,7 +199,7 @@
         <div class="skill">
             <h3>Entrepreneurship</h3>
             <p>
-                The focus of parts of my educational career laid on the monetary and contextual aspects of a development
+                Parts of my educational career laid focus on the monetary and contextual aspects of a development
                 process. Courses like 'Business Economics' or 'Entrepreneurial Thinking' gave me a basic understanding
                 of the industries' inner works.
             </p>
@@ -173,11 +220,12 @@
     <img src="img/chess-img.webp" alt="Reading with Seoul" class="about-me__img">
     <div class="about-me__body">
         <p>
-            I am a student, currently enrolled in the study program 'Code & Context' at the 'Technische Hochschule
+            I am a former student, graduated recently from the study program 'Code & Context' at the 'Technische
+            Hochschule
             Köln'.
         </p>
         <p>
-            All my life I have been growing fond of creating stuff, technology, travelling, making music and learning
+            All my life I have been growing fond of creating stuff, technology, traveling, making music and learning
             new things.
         </p>
     </div>
