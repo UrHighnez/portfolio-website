@@ -64,9 +64,9 @@ table {
     --fw-reg: 300;
     --fw-bold: 700;
 
-    --clr-bg: #d8d7d2;
-    --clr-text: #0d1f29;
-    --clr-accent: #43d2ec;
+    --clr-bg: #eaeaea;
+    --clr-text: #1e1e1e;
+    --clr-accent: #34b3a0;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -78,9 +78,9 @@ table {
 }
 
 html[data-theme="dark"] {
-    --clr-bg: #0d1f29;
-    --clr-text: #d8d7d2;
-    --clr-accent: #1f6571;
+    --clr-bg: #121212;
+    --clr-text: #d3d3d3;
+    --clr-accent: #1f685d;
 }
 
 @media (min-width: 800px) {
