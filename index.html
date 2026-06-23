@@ -3,257 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Johannes Krieg - Developer and Designer. Portfolio with projects in game development, VR, procedural generation and digital art.">
-    <title>Johannes Krieg - Developer &amp; Designer</title>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Johannes Krieg - Developer &amp; Designer">
-    <meta property="og:description" content="Johannes Krieg - Developer and Designer. Portfolio with projects in game development, VR, procedural generation and digital art.">
-    <meta property="og:url" content="https://jkrieg.eu/">
-    <meta property="og:image" content="https://jkrieg.eu/img/art-img.png">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Johannes Krieg — Developer &amp; Creative Technologist</title>
+    <meta name="description"
+          content="Johannes Krieg — developer, creative technologist and DevOps. Portfolio of procedural generation, VR, creative coding and web projects.">
+
+    <!-- Apply saved theme before first paint to avoid a flash -->
     <script>
         (function () {
             try {
                 var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                document.documentElement.setAttribute('data-theme', t);
+                document.documentElement.dataset.theme = t;
             } catch (e) {}
         })();
     </script>
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Johannes Krieg — Developer &amp; Creative Technologist">
+    <meta property="og:description"
+          content="Portfolio of procedural generation, VR, creative coding and web projects.">
+    <meta property="og:url" content="https://jkrieg.eu/">
+    <meta property="og:image" content="https://jkrieg.eu/img/art-img.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+3:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <a href="#home">
-            <img src="img/jkrieg-logo-light.png" alt="Johannes Krieg Logo" class="logo-light">
-            <img src="img/jkrieg-logo-dark.png" alt="" class="logo-dark" aria-hidden="true">
-        </a>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="header-inner">
+        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <a class="path" href="#top">~/johannes-krieg</a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary">
+            <a href="#work" data-en="work" data-de="arbeit">work</a>
+            <a href="#stack" data-en="stack" data-de="stack">stack</a>
+            <a href="#about" data-en="about" data-de="über mich">about</a>
+            <a href="#contact" data-en="contact" data-de="kontakt">contact</a>
+        </nav>
+
+        <div class="header-controls">
+            <button class="icon-btn" id="lang-btn" aria-label="Switch language">DE</button>
+            <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode">☾</button>
+            <button class="icon-btn menu-toggle" id="menu-btn" aria-label="Toggle menu" aria-expanded="false"
+                    aria-controls="main-nav">menu
+            </button>
+        </div>
     </div>
-
-    <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="navigation-btn"></span>
-    </button>
-
-    <nav class="nav">
-        <ul class="nav__list">
-            <li>
-                <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
-            </li>
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#projects" class="nav__link">My projects</a></li>
-            <li class="nav__item"><a href="#skills" class="nav__link">My skills</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-        </ul>
-    </nav>
 </header>
 
-<!-- Intro -->
+<main>
 
-<section class="intro" id="home">
-    <h1 class="section__title section__title--intro">
-        Hey! I am <strong class="typed-out">Johannes</strong>
-    </h1>
-    <p class="section__subtitle section__subtitle--intro">Developer; Designer</p>
-    <img src="img/art-img.png" alt="art image" class="intro__img">
-</section>
-
-
-<!-- My Projects -->
-
-<section class="my-projects" id="projects">
-    <h2 class="section__title section__title--projects">My projects</h2>
-    <p class="section__subtitle section__subtitle--projects">A colorful selection from my work</p>
-
-    <div id="slider">
-        <div class="slider-container">
-            <a href="portfolio/pcg-toolkit.html" class="slide active"
-               style="background-image: url('img/pcg-toolkit-details.gif');">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>PCG Toolkit</h3>
-                        <p>A toolkit for procedurally generating 2D landscapes that I created for my Bachelor's
-                            thesis.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/vr-sailing.html" class="slide" data-bg="img/vr-sailing-details.gif">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>VR Sailing Simulation</h3>
-                        <p>A sailing simulation in Virtual Reality, created with Unity for the Oculus Quest.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/vr-showroom.html" class="slide" data-bg="img/vr-showroom.gif">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Showroom for World of VR</h3>
-                        <p>A university project in cooperation with a company that develops a training app in Virtual
-                            Reality.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/furniture.html" class="slide" data-bg="img/furniture-details.gif">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Study space design</h3>
-                        <p>As part of our study program, we designed the interior space for our students needs through
-                            various artifacts.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/electrical-engineering.html" class="slide" data-bg="img/dal-segno.gif">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Electrical engineering</h3>
-                        <p>I have created various physical prototypes, including a musical instrument glove, an artistic
-                            death toll radio, a remote controlled zeppelin and an automatic door lock.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/mixed-marble-arts.html" class="slide" data-bg="img/dancing-numbers-details-2.gif">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Mixed marble arts</h3>
-                        <p>Experimenting with the JavaScript framework p5, various artifacts have been created,
-                            including a game where players control a moving circle with the gyroscope of their
-                            phone.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/mortal-kontext.html" class="slide" data-bg="img/mortal-kontext.png">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Mortal Kontext</h3>
-                        <p>A prototype for a simple fighting game created with Unity and blender.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/3d-mapgeneration.html" class="slide" data-bg="img/blender-mapgen.jpg">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>3D map generation</h3>
-                        <p>Using Unity and Blender, I have created multiple map generation tools making use of different
-                            techniques.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/klatschmuhle.html" class="slide" data-bg="img/klatschmühle.png">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Klatschmühle</h3>
-                        <p>A web application to watch and react to the livestream of the shiny toys festival remotely
-                            during the covid pandemic.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="portfolio/emission-impossible.html" class="slide" data-bg="img/emission-impossible.png">
-                <div class="overlay">
-                    <div class="overlay-content">
-                        <h3>Emission Impossible</h3>
-                        <p>An Android app that tracks your emissions using various ways of transportation.</p>
-                    </div>
-                </div>
-            </a>
+    <!-- 01 · Hero -->
+    <section class="hero" id="top">
+        <canvas class="bg-canvas" id="bg-terrain" aria-hidden="true"></canvas>
+        <div class="section-inner">
+            <p class="prompt"><span class="muted">$</span> whoami<span class="cursor" aria-hidden="true"></span></p>
+            <h1 class="hero-name">Johannes Krieg</h1>
+            <p class="hero-role"><span class="muted">role =</span> "developer · creative technologist · devops"</p>
+            <div class="status-badge">
+                <span class="dot" aria-hidden="true"></span>
+                <span data-en="available for work" data-de="offen für neue Projekte">available for work</span>
+            </div>
+            <div class="cta-row">
+                <a class="btn btn-primary" href="#work" data-en="view work" data-de="Arbeiten ansehen">view work</a>
+                <a class="btn btn-ghost" href="#contact" data-en="get in touch" data-de="Kontakt aufnehmen">get in touch</a>
+            </div>
         </div>
-        <button class="portfolio-nav left" aria-label="Previous slide">❮</button>
-        <button class="portfolio-nav right" aria-label="Next slide">❯</button>
+    </section>
+
+    <!-- 02 · Selected Work -->
+    <section class="section work" id="work">
+        <div class="section-inner">
+            <p class="prompt section-prompt"><span class="cmd">$</span> ls ./work --featured</p>
+            <h2 class="section-title" data-en="Selected work" data-de="Ausgewählte Arbeiten">Selected work</h2>
+
+            <div class="featured-grid">
+                <a class="featured-card" href="portfolio/pcg-toolkit.html">
+                    <span class="featured-flag">★ featured</span>
+                    <img src="img/pcg-toolkit-details.gif" alt="PCG Toolkit" loading="lazy" decoding="async">
+                    <div class="overlay">
+                        <h3 class="card-title">PCG Toolkit</h3>
+                        <p class="card-desc"
+                           data-en="Modular toolkit for procedural 2D map generation — my Bachelor's thesis."
+                           data-de="Modulares Toolkit zur prozeduralen 2D-Kartengenerierung — meine Bachelorarbeit.">
+                            Modular toolkit for procedural 2D map generation — my Bachelor's thesis.</p>
+                        <ul class="tags">
+                            <li class="tag">Web</li>
+                            <li class="tag">Go</li>
+                            <li class="tag">Procedural</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a class="featured-card" href="portfolio/vr-sailing.html">
+                    <span class="featured-flag">★ featured</span>
+                    <img src="img/vr-sailing-details.gif" alt="VR Sailing Simulation" loading="lazy" decoding="async">
+                    <div class="overlay">
+                        <h3 class="card-title">VR Sailing Simulation</h3>
+                        <p class="card-desc"
+                           data-en="A sailing simulation in Virtual Reality, built with Unity for the Oculus Quest."
+                           data-de="Eine Segel-Simulation in Virtual Reality, gebaut mit Unity für die Oculus Quest.">
+                            A sailing simulation in Virtual Reality, built with Unity for the Oculus Quest.</p>
+                        <ul class="tags">
+                            <li class="tag">VR</li>
+                            <li class="tag">Unity</li>
+                            <li class="tag">Quest</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+
+            <div class="work-grid">
+                <a class="card" href="portfolio/vr-showroom.html">
+                    <div class="card-media"><img src="img/vr-showroom.gif" alt="World of VR Showroom" loading="lazy" decoding="async"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">World of VR Showroom</h3>
+                        <p class="card-desc"
+                           data-en="A VR showroom built with a company developing a VR training app."
+                           data-de="Ein VR-Showroom, entwickelt mit einem Unternehmen für eine VR-Trainingsapp.">
+                            A VR showroom built with a company developing a VR training app.</p>
+                        <ul class="tags"><li class="tag">VR</li><li class="tag">Web</li><li class="tag">Client</li></ul>
+                    </div>
+                </a>
+
+                <a class="card" href="portfolio/3d-mapgeneration.html">
+                    <div class="card-media"><img src="img/blender-mapgen.jpg" alt="3D Map Generation" loading="lazy" decoding="async"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">3D Map Generation</h3>
+                        <p class="card-desc"
+                           data-en="Multiple 3D map-generation tools built with Unity and Blender."
+                           data-de="Mehrere 3D-Kartengenerierungs-Tools mit Unity und Blender.">
+                            Multiple 3D map-generation tools built with Unity and Blender.</p>
+                        <ul class="tags"><li class="tag">Unity</li><li class="tag">Blender</li><li class="tag">Unity</li></ul>
+                    </div>
+                </a>
+
+                <a class="card" href="portfolio/emission-impossible.html">
+                    <div class="card-media"><img src="img/emission-impossible.png" alt="Emission Impossible" loading="lazy" decoding="async"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Emission Impossible</h3>
+                        <p class="card-desc"
+                           data-en="An Android app that tracks your emissions across modes of transport."
+                           data-de="Eine Android-App, die Emissionen verschiedener Verkehrsmittel erfasst.">
+                            An Android app that tracks your emissions across modes of transport.</p>
+                        <ul class="tags"><li class="tag">Android</li></ul>
+                    </div>
+                </a>
+
+                <a class="card" href="portfolio/mixed-marble-arts.html">
+                    <div class="card-media"><img src="img/dancing-numbers-details-2.gif" alt="Mixed Marble Arts" loading="lazy" decoding="async"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Mixed Marble Arts</h3>
+                        <p class="card-desc"
+                           data-en="Creative coding experiments with p5.js, including a gyroscope-controlled web game."
+                           data-de="Creative-Coding-Experimente mit p5.js, inkl. eines per Gyroskop gesteuerten Web-Games.">
+                            Creative coding experiments with p5.js, including a gyroscope-controlled web game.</p>
+                        <ul class="tags"><li class="tag">p5.js</li><li class="tag">Web</li></ul>
+                    </div>
+                </a>
+
+                <a class="card" href="portfolio/mortal-kontext.html">
+                    <div class="card-media"><img src="img/mortal-kontext.png" alt="Mortal Kontext" loading="lazy" decoding="async"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Mortal Kontext</h3>
+                        <p class="card-desc"
+                           data-en="A prototype for a simple fighting game, built with Unity and Blender."
+                           data-de="Ein Prototyp für ein einfaches Kampfspiel, gebaut mit Unity und Blender.">
+                            A prototype for a simple fighting game, built with Unity and Blender.</p>
+                        <ul class="tags"><li class="tag">Unity</li><li class="tag">Blender</li><li class="tag">Unity</li></ul>
+                    </div>
+                </a>
+
+                <a class="card" href="portfolio/klatschmuhle.html">
+                    <div class="card-media"><img src="img/klatschmühle.png" alt="Klatschmühle" loading="lazy" decoding="async"></div>
+                    <div class="card-body">
+                        <h3 class="card-title">Klatschmühle</h3>
+                        <p class="card-desc"
+                           data-en="A web app to watch and react to a festival livestream during the pandemic."
+                           data-de="Eine Web-App, um einen Festival-Livestream während der Pandemie zu verfolgen.">
+                            A web app to watch and react to a festival livestream during the pandemic.</p>
+                        <ul class="tags"><li class="tag">Web</li></ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 · Stack & Toolchain -->
+    <section class="section stack" id="stack">
+        <canvas class="bg-canvas" id="bg-dots" aria-hidden="true"></canvas>
+        <div class="section-inner">
+            <p class="prompt section-prompt"><span class="cmd">$</span> cat stack.yml</p>
+            <h2 class="section-title" data-en="Stack &amp; Toolchain" data-de="Stack &amp; Toolchain">Stack &amp; Toolchain</h2>
+
+            <div class="stack-grid">
+                <div class="stack-card">
+                    <span class="num">01</span>
+                    <h3 data-en="Software Development" data-de="Softwareentwicklung">Software Development</h3>
+                    <ul class="tags">
+                        <li class="tag">Java</li><li class="tag">C#</li><li class="tag">Go</li><li class="tag">HTML/CSS/JS</li>
+                        <li class="tag">Git</li><li class="tag">TDD/DDD</li><li class="tag">AI</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <span class="num">02</span>
+                    <h3 data-en="DevOps &amp; Cloud" data-de="DevOps &amp; Cloud">DevOps &amp; Cloud</h3>
+                    <ul class="tags">
+                        <li class="tag">Linux</li><li class="tag">CI/CD</li><li class="tag">Docker</li>
+                        <li class="tag">GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <span class="num">03</span>
+                    <h3 data-en="Realtime &amp; Graphics" data-de="Echtzeit &amp; Grafik">Realtime &amp; Graphics</h3>
+                    <ul class="tags">
+                        <li class="tag">Unity</li><li class="tag">VR/XR</li><li class="tag">Godot</li>
+                        <li class="tag">Procedural</li><li class="tag">Shaders</li><li class="tag">Blender</li>
+                    </ul>
+                </div>
+                <div class="stack-card">
+                    <span class="num">04</span>
+                    <h3 data-en="Ways of working" data-de="Arbeitsweisen">Ways of working</h3>
+                    <ul class="tags">
+                        <li class="tag">Scrum</li><li class="tag">Kanban</li><li class="tag">Design Thinking</li>
+                        <li class="tag">p5.js</li><li class="tag">Figma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 · About -->
+    <section class="section about" id="about">
+        <div class="section-inner">
+            <p class="prompt section-prompt"><span class="cmd">$</span> cat about.md</p>
+            <h2 class="section-title" data-en="About" data-de="Über mich">About</h2>
+
+            <div class="about-grid">
+                <div class="comment-block">
+                    <span class="cmt">/*</span><br>
+                    <span data-en="Code &amp; Context graduate (TH Köln) who likes building things — from procedural worlds to web apps and CI pipelines. Equal parts developer, creative technologist and tinkerer."
+                          data-de="Code-&amp;-Context-Absolvent (TH Köln), der gerne Dinge baut — von prozeduralen Welten über Web-Apps bis zu CI-Pipelines. Entwickler, Creative Technologist und Bastler in einem.">Code &amp; Context graduate (TH Köln) who likes building things — from procedural worlds to web apps and CI pipelines. Equal parts developer, creative technologist and tinkerer.</span><br>
+                    <span class="cmt">*/</span>
+                </div>
+                <ul class="facts">
+                    <li><span class="k" data-en="location" data-de="Standort">location</span><span class="v">Cologne, DE</span></li>
+                    <li><span class="k" data-en="degree" data-de="Abschluss">degree</span><span class="v">B.A. Code &amp; Context</span></li>
+                    <li><span class="k" data-en="focus" data-de="Fokus">focus</span><span class="v">Dev · DevOps · Creative Coding</span></li>
+                    <li><span class="k" data-en="status" data-de="Status">status</span><span class="v" data-en="Open to work" data-de="Offen für Angebote">Open to work</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- 05 · Contact / Footer -->
+<footer class="section site-footer" id="contact">
+    <div class="section-inner">
+        <p class="prompt section-prompt"><span class="cmd">$</span> ./contact.sh</p>
+        <h2 class="contact-title" data-en="Let's build something." data-de="Lass uns etwas bauen.">Let's build something.</h2>
+        <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:johannes-d.krieg@web.de" data-en="email me" data-de="E-Mail schreiben">email me</a>
+            <ul class="footer-social">
+                <li><a href="https://github.com/UrHighnez" aria-label="GitHub" target="_blank" rel="noopener">
+                    <span class="social-icon" style="--i:url('/icon/github-brands.svg')"></span></a></li>
+                <li><a href="https://linkedin.com/in/johannes-krieg" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <span class="social-icon" style="--i:url('/icon/linkedin-brands.svg')"></span></a></li>
+                <li><a href="mailto:johannes-d.krieg@web.de" aria-label="E-Mail">
+                    <span class="social-icon" style="--i:url('/icon/email-button.svg')"></span></a></li>
+            </ul>
+        </div>
+        <p class="footer-meta">© 2026 Johannes Krieg · <span data-en="built with HTML, CSS &amp; a bit of canvas" data-de="gebaut mit HTML, CSS &amp; etwas Canvas">built with HTML, CSS &amp; a bit of canvas</span></p>
     </div>
-</section>
-
-<div class="elementor-shape elementor-shape-top" data-negative="false">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="elementor-shape-fill" opacity="0.33"
-              d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
-        <path class="elementor-shape-fill" opacity="0.66"
-              d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
-        <path class="elementor-shape-fill"
-              d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
-    </svg>
-</div>
-
-<!-- My Skills -->
-
-<section class="my-skills" id="skills">
-    <h2 class="section__title section__title--skills">My skills</h2>
-    <div class="skills">
-        <div class="skill">
-            <h3>Software Development</h3>
-            <p>
-                Through countless projects at university and otherwise, I had intense contact with the collaborative and
-                agile software development process, including relevant toolkits and concepts, such as Scrum,
-                Git, DevOps (CI/CD), TDD, DDD, Kanban-Boards and much more.
-            </p>
-        </div>
-
-        <div class="skill">
-            <h3>Design & Digital Art</h3>
-            <p>
-                During my free time but also for university projects, I very much enjoy creating Digital Art in all
-                sizes and shapes, using software such as Blender or Unity. Through Design Thinking concepts, I am also
-                capable of a more streamlined approach.
-            </p>
-        </div>
-
-        <div class="skill">
-            <h3>Entrepreneurship</h3>
-            <p>
-                Parts of my educational career laid focus on the monetary and contextual aspects of a development
-                process. Courses like 'Business Economics' or 'Entrepreneurial Thinking' gave me an idea
-                of the industries' inner works.
-            </p>
-        </div>
-    </div>
-
-    <a href="#projects" class="btn">See my Projects</a>
-</section>
-
-<!-- About me -->
-
-<section class="about-me" id="about">
-    <h2 class="section__title section__title--about">About me</h2>
-    <p class="section__subtitle section__subtitle--about">
-        Technological Generalist
-    </p>
-    <img src="img/chess-img.webp" alt="Reading with Seoul" class="about-me__img">
-    <div class="about-me__body">
-        <p>
-            I am a former student, graduated recently from the study program 'Code & Context' at the 'Technische
-            Hochschule
-            Köln'.
-        </p>
-        <p>
-            All my life I have been growing fond of creating stuff, technology, traveling, designing and playing games,
-            making music and learning new things.
-        </p>
-    </div>
-</section>
-
-
-<!-- Footer -->
-
-<footer class="footer">
-    <ul class="social-list">
-        <li class="social-list__item"><a class="social-list__link" href="mailto:johannes-d.krieg@web.de" aria-label="E-Mail">
-            <img src="icon/email-button.svg" alt="" class="mail-to"></a></li>
-        <li class="social-list__item">
-            <a class="social-list__link" href="https://linkedin.com/in/johannes-krieg" aria-label="LinkedIn">
-                <img src="icon/linkedin-brands.svg" alt="" class="fa-linkedin"/></a></li>
-        <li class="social-list__item"><a class="social-list__link" href="https://github.com/UrHighnez" aria-label="GitHub">
-            <img src="icon/github-brands.svg" alt="" class="fa-github"></a></li>
-        <li class="social-list__item"><a class="social-list__link"
-                                         href="https://www.youtube.com/channel/UCWKjYhF0S7hdZW37gXP3v3Q" aria-label="YouTube">
-            <img src="icon/youtube-brands.svg" alt="" class="fa-youtube"></a></li>
-    </ul>
 </footer>
 
-<script src="js/index.js"></script>
+<script src="js/backgrounds.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
