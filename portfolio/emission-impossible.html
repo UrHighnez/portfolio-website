@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>j</krieg></title>
+    <title>Emission Impossible - Johannes Krieg</title>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+3:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <header>
     <div class="logo">
         <a href="../index.html">
-            <img src="../img/jkrieg-logo-light.png" alt="logo" id="logo">
+            <img src="../img/jkrieg-logo-light.png" alt="Johannes Krieg Logo" class="logo-light">
+            <img src="../img/jkrieg-logo-dark.png" alt="" class="logo-dark" aria-hidden="true">
         </a>
     </div>
 
@@ -73,15 +81,15 @@
 
 <footer class="footer">
     <ul class="social-list">
-        <li class="social-list__item"><a class="social-list__link" href="mailto:johannes-d.krieg@web.de">
+        <li class="social-list__item"><a class="social-list__link" href="mailto:johannes-d.krieg@web.de" aria-label="E-Mail">
             <img src="../icon/email-button.svg" alt="" class="mail-to"></a></li>
         <li class="social-list__item">
-            <a class="social-list__link" href="https://linkedin.com/in/johannes-krieg">
+            <a class="social-list__link" href="https://linkedin.com/in/johannes-krieg" aria-label="LinkedIn">
                 <img src="../icon/linkedin-brands.svg" alt="" class="fa-linkedin"/></a></li>
-        <li class="social-list__item"><a class="social-list__link" href="https://github.com/UrHighnez">
+        <li class="social-list__item"><a class="social-list__link" href="https://github.com/UrHighnez" aria-label="GitHub">
             <img src="../icon/github-brands.svg" alt="" class="fa-github"></a></li>
         <li class="social-list__item"><a class="social-list__link"
-                                         href="https://www.youtube.com/channel/UCWKjYhF0S7hdZW37gXP3v3Q">
+                                         href="https://www.youtube.com/channel/UCWKjYhF0S7hdZW37gXP3v3Q" aria-label="YouTube">
             <img src="../icon/youtube-brands.svg" alt="" class="fa-youtube"></a></li>
     </ul>
 </footer>

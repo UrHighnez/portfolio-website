@@ -58,7 +58,7 @@ table {
 /*Custom Properties*/
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-primary: 'Source Sans 3', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
 
     --fw-reg: 300;
@@ -103,7 +103,7 @@ body {
     background: var(--clr-bg);
     color: var(--clr-text);
     margin: 0;
-    font-family: var(--ff-primary), serif;
+    font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
 }
@@ -214,7 +214,7 @@ ul {
 .section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secondary), sans-serif;
+    font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
 
@@ -234,6 +234,19 @@ header {
 .logo {
     max-width: 150px;
     cursor: pointer;
+}
+
+/* Show the logo variant matching the current theme (set before paint in <head>) */
+.logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block;
 }
 
 .nav {
