@@ -20,38 +20,31 @@
         })();
     </script>
     <link rel="shortcut icon" href="/favicon.ico"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+3:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="legacy">
-<header>
-    <div class="logo">
-        <a href="../index.html">
-            <img src="../img/jkrieg-logo-light.png" alt="Johannes Krieg Logo" class="logo-light">
-            <img src="../img/jkrieg-logo-dark.png" alt="" class="logo-dark" aria-hidden="true">
-        </a>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <a class="path" href="../index.html">~/work/vr-sailing</a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary">
+            <a href="../index.html#work" data-en="work" data-de="arbeit">work</a>
+            <a href="../index.html#stack" data-en="stack" data-de="stack">stack</a>
+            <a href="../index.html#about" data-en="about" data-de="über mich">about</a>
+            <a href="../index.html#contact" data-en="contact" data-de="kontakt">contact</a>
+        </nav>
+
+        <div class="header-controls">
+            <button class="icon-btn" id="lang-btn" aria-label="Switch language">DE</button>
+            <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode">☾</button>
+            <button class="icon-btn menu-toggle" id="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">menu</button>
+        </div>
     </div>
-
-    <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="navigation-btn"></span>
-    </button>
-
-    <nav class="nav">
-        <ul class="nav__list">
-            <li>
-                <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
-            </li>
-            <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="../index.html#projects" class="nav__link">My projects</a></li>
-            <li class="nav__item"><a href="../index.html#skills" class="nav__link">My skills</a></li>
-            <li class="nav__item"><a href="../index.html#about" class="nav__link">About me</a></li>
-        </ul>
-    </nav>
 </header>
 
 <!-- Intro -->
@@ -61,7 +54,7 @@
         Virtual Reality<strong>Sailing</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">Exploring VR</p>
-    <img src="../img/vr-sailing.png" alt="" class="intro__img">
+    <img src="../img/vr-sailing.png" alt="" class="intro__img" loading="lazy" decoding="async">
 </section>
 
 <div class="portfolio-item-individual">
@@ -69,7 +62,7 @@
         Another exciting project I have been working on is a sailing simulation in Virtual Reality, created with Unity
         as a Game Engine and Blender for my models and animations.
     </p>
-    <img src="../img/vr-sailing-details.gif" alt="" class="intro__img">
+    <img src="../img/vr-sailing-details.gif" alt="" class="intro__img" loading="lazy" decoding="async">
     <p>
         The biggest challenge was getting the waves to look and feel right. After a lot of fiddling around myself,
         lacking the satisfying results, I found an invaluable, royalty-free, Unity-plugin called
@@ -78,33 +71,32 @@
         produce much more authentic results. More on this can be found
         <a href="https://catlikecoding.com/unity/tutorials/flow/waves/">here</a>.
     </p>
-    <img src="../img/proceduralIsland.gif" alt="" class="intro__img">
+    <img src="../img/proceduralIsland.gif" alt="" class="intro__img" loading="lazy" decoding="async">
     <p>
         Another interesting part of this project was the generation of procedural islands. I will link the (german)
         documentation of the project
         <a href="https://docs.google.com/document/d/1jxEAXNh_Y9WL4xLsAhJAnsKqZyPgPayAJqBXzXwDwkM/edit?usp=sharing">here</a>.
     </p>
-    <img src="../img/vr-sailing.gif" alt="" class="intro__img">
+    <img src="../img/vr-sailing.gif" alt="" class="intro__img" loading="lazy" decoding="async">
 </div>
 
 
 <!-- Footer -->
 
-<footer class="footer">
-    <ul class="social-list">
-        <li class="social-list__item"><a class="social-list__link" href="mailto:johannes-d.krieg@web.de" aria-label="E-Mail">
-            <img src="../icon/email-button.svg" alt="" class="mail-to"></a></li>
-        <li class="social-list__item">
-            <a class="social-list__link" href="https://linkedin.com/in/johannes-krieg" aria-label="LinkedIn">
-                <img src="../icon/linkedin-brands.svg" alt="" class="fa-linkedin"/></a></li>
-        <li class="social-list__item"><a class="social-list__link" href="https://github.com/UrHighnez" aria-label="GitHub">
-            <img src="../icon/github-brands.svg" alt="" class="fa-github"></a></li>
-        <li class="social-list__item"><a class="social-list__link"
-                                         href="https://www.youtube.com/channel/UCWKjYhF0S7hdZW37gXP3v3Q" aria-label="YouTube">
-            <img src="../icon/youtube-brands.svg" alt="" class="fa-youtube"></a></li>
-    </ul>
+<footer class="section site-footer">
+    <div class="section-inner">
+        <div class="contact-actions">
+            <a class="btn btn-ghost" href="../index.html#work" data-en="← back to work" data-de="← zurück zu den Arbeiten">← back to work</a>
+            <ul class="footer-social">
+                <li><a href="https://github.com/UrHighnez" aria-label="GitHub" target="_blank" rel="noopener"><span class="social-icon" style="--i:url('/icon/github-brands.svg')"></span></a></li>
+                <li><a href="https://linkedin.com/in/johannes-krieg" aria-label="LinkedIn" target="_blank" rel="noopener"><span class="social-icon" style="--i:url('/icon/linkedin-brands.svg')"></span></a></li>
+                <li><a href="mailto:johannes-d.krieg@web.de" aria-label="E-Mail"><span class="social-icon" style="--i:url('/icon/email-button.svg')"></span></a></li>
+            </ul>
+        </div>
+        <p class="footer-meta">© 2026 Johannes Krieg</p>
+    </div>
 </footer>
 
-<script src="../js/index.js"></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>
