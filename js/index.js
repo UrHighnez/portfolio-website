@@ -39,7 +39,29 @@ function initSlider() {
     const AUTO_MS = 5000;
     let autoId = null;
 
-    const show = i => slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    // Lazy-load backgrounds from data-bg the first time a slide is needed, so the
+    // page no longer pulls every (large) image up front. The active slide keeps its
+    // inline background so it paints immediately and still works without JS.
+    const ensureLoaded = i => {
+        const s = slides[i];
+        if (s && s.dataset.bg) {
+            s.style.backgroundImage = `url('${s.dataset.bg}')`;
+            delete s.dataset.bg;
+        }
+    };
+    const preloadNext = i => {
+        const next = () => ensureLoaded((i + 1) % slides.length);
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(next, {timeout: 2000});
+        } else {
+            setTimeout(next, 1000);
+        }
+    };
+    const show = i => {
+        ensureLoaded(i);
+        preloadNext(i);
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+    };
     const go = d => {
         current = (current + d + slides.length) % slides.length;
         show(current);
