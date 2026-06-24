@@ -35,6 +35,11 @@
             const val = el.dataset[lang];
             if (val != null) el.textContent = val;
         });
+        // Rich text (keeps inline links/markup) — used for prose with embedded links
+        document.querySelectorAll('[data-en-html]').forEach(el => {
+            const val = el.dataset[lang + 'Html'];
+            if (val != null) el.innerHTML = val;
+        });
         if (langBtn) {
             langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
             langBtn.setAttribute('aria-label', lang === 'de' ? 'Switch to English' : 'Auf Deutsch umschalten');

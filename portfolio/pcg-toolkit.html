@@ -53,44 +53,33 @@
     <h1 class="section__title section__title--intro">
         Procedural<strong>Generation</strong>
     </h1>
-    <p class="section__subtitle section__subtitle--intro">My Bachelor’s Thesis</p>
-    <img src="../img/pcg-toolkit.png" alt="" class="intro__img" loading="lazy" decoding="async">
+    <p class="section__subtitle section__subtitle--intro" data-en="My Bachelor's Thesis" data-de="Meine Bachelorarbeit">My Bachelor's Thesis</p>
+    <img src="../img/pcg-toolkit.png" alt="PCG Toolkit" class="intro__img" loading="lazy" decoding="async">
 </section>
 
 <div class="portfolio-item-individual">
-    <p>
-        In this project, I developed a modular toolkit for the procedural generation of 2D tile-based maps and conducted
-        a scientific comparison of three discrete generation methods:
-    </p>
+    <p data-en="For my Bachelor's thesis I built a modular toolkit for procedurally generating 2D tile-based maps, and ran a scientific comparison of three generation methods:"
+       data-de="Für meine Bachelorarbeit habe ich ein modulares Toolkit zur prozeduralen Generierung von 2D-Kachelkarten gebaut und drei Generierungsverfahren wissenschaftlich verglichen:">For my Bachelor's thesis I built a modular toolkit for procedurally generating 2D tile-based maps, and ran a scientific comparison of three generation methods:</p>
     <ul>
-        <li>Multi-Layered Cellular Automata (MLCA) – rule-based and iterative</li>
-        <li>Perlin Noise – stochastic and continuous</li>
-        <li>Wave Function Collapse (WFC) – constraint-based and structured</li>
+        <li data-en="Multi-Layered Cellular Automata (MLCA) — rule-based and iterative" data-de="Multi-Layered Cellular Automata (MLCA) – regelbasiert und iterativ">Multi-Layered Cellular Automata (MLCA) — rule-based and iterative</li>
+        <li data-en="Perlin Noise — stochastic and continuous" data-de="Perlin Noise – stochastisch und kontinuierlich">Perlin Noise — stochastic and continuous</li>
+        <li data-en="Wave Function Collapse (WFC) — constraint-based and structured" data-de="Wave Function Collapse (WFC) – constraint-basiert und strukturiert">Wave Function Collapse (WFC) — constraint-based and structured</li>
     </ul>
-    <br>
-    <p>
-        The backend was implemented in Go, with an interactive browser frontend in JavaScript. The system includes
-        real-time analysis of key metrics such as entropy, clustering, autocorrelation, and frequency distribution.
-    </p>
-    <img src="../img/pcg-toolkit-details.gif" alt="" class="intro__img" loading="lazy" decoding="async">
-    <p>
-        To ensure comparability, all algorithms operate on standardized input (25×25 grids, 8 terrain types, fixed
-        seeds). Seven quantitative metrics were used to evaluate visual diversity, coherence, and structural complexity.
-    </p>
-    <img src="../img/noise-scale.gif" alt="" class="intro__img" loading="lazy" decoding="async">
-    <p>
-        Key findings:
-        Each method excels in different areas: MLCA offers high controllability, Perlin produces natural transitions,
-        and WFC yields diverse results—but with higher computational cost. Hybrid combinations show strong potential.
-    </p>
-    <img src="../img/wfc.gif" alt="" class="intro__img" loading="lazy" decoding="async">
-    <p>
-        Contribution:
-        A reproducible framework for evaluating and comparing procedural generators—complete with visual output,
-        interactive tooling, and scientific documentation.
-        The repository can be accessed <a href="https://github.com/UrHighnez/procedural-map-generation-toolkit">here</a>.
-    </p>
-    <img src="../img/conways-gol.gif" alt="" class="intro__img" loading="lazy" decoding="async">
+    <p data-en="The backend runs in Go, with an interactive browser frontend in JavaScript. Key metrics — entropy, clustering, autocorrelation and frequency distribution — are analysed in real time."
+       data-de="Das Backend läuft in Go, das interaktive Browser-Frontend in JavaScript. Kennzahlen wie Entropie, Clustering, Autokorrelation und Frequenzverteilung werden in Echtzeit ausgewertet.">The backend runs in Go, with an interactive browser frontend in JavaScript. Key metrics — entropy, clustering, autocorrelation and frequency distribution — are analysed in real time.</p>
+    <img src="../img/pcg-toolkit-details.gif" alt="PCG Toolkit interface" class="intro__img" loading="lazy" decoding="async">
+    <p data-en="To keep the methods comparable, every algorithm works on standardised input (25×25 grids, 8 terrain types, fixed seeds), evaluated across seven quantitative metrics for diversity, coherence and structural complexity."
+       data-de="Damit die Verfahren vergleichbar bleiben, arbeiten alle Algorithmen auf standardisiertem Input (25×25-Raster, 8 Geländetypen, feste Seeds) und werden über sieben Kennzahlen für Vielfalt, Kohärenz und strukturelle Komplexität bewertet.">To keep the methods comparable, every algorithm works on standardised input (25×25 grids, 8 terrain types, fixed seeds), evaluated across seven quantitative metrics for diversity, coherence and structural complexity.</p>
+    <img src="../img/noise-scale.gif" alt="Perlin noise scale comparison" class="intro__img" loading="lazy" decoding="async">
+    <p data-en="Each method has its strengths: MLCA offers fine control, Perlin produces natural transitions, and WFC yields the most varied results — at a higher computational cost. Hybrid combinations show strong potential."
+       data-de="Jede Methode hat ihre Stärken: MLCA bietet feine Kontrolle, Perlin erzeugt natürliche Übergänge, und WFC liefert die abwechslungsreichsten Ergebnisse – bei höherem Rechenaufwand. Hybride Kombinationen zeigen großes Potenzial.">Each method has its strengths: MLCA offers fine control, Perlin produces natural transitions, and WFC yields the most varied results — at a higher computational cost. Hybrid combinations show strong potential.</p>
+    <img src="../img/wfc.gif" alt="Wave Function Collapse output" class="intro__img" loading="lazy" decoding="async">
+    <p data-en="The result is a reproducible framework for evaluating and comparing procedural generators, with visual output, interactive tooling and full documentation."
+       data-de="Das Ergebnis ist ein reproduzierbares Framework zum Bewerten und Vergleichen prozeduraler Generatoren – mit visueller Ausgabe, interaktivem Tooling und vollständiger Dokumentation.">The result is a reproducible framework for evaluating and comparing procedural generators, with visual output, interactive tooling and full documentation.</p>
+    <img src="../img/conways-gol.gif" alt="Conway's Game of Life" class="intro__img" loading="lazy" decoding="async">
+    <div class="links">
+        <a href="https://github.com/UrHighnez/procedural-map-generation-toolkit" target="_blank" rel="noopener">GitHub Repo</a>
+    </div>
 </div>
 
 
