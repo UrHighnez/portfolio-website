@@ -66,4 +66,12 @@
         });
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
     }
+
+    /* ---------- Reduced motion: stop autoplaying clips ---------- */
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('video[autoplay]').forEach(v => {
+            v.removeAttribute('autoplay');
+            v.pause();
+        });
+    }
 })();
