@@ -15,11 +15,11 @@
         (function () {
             try {
                 var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                document.documentElement.setAttribute('data-theme', t);
+                document.documentElement.dataset.theme = t;
             } catch (e) {}
         })();
     </script>
-    <link rel="shortcut icon" href="../favicon.ico"/>
+    <link rel="icon" href="../favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,10 +50,10 @@
 <!-- Intro -->
 
 <section class="intro">
-    <h1 class="section__title section__title--intro">
+    <h1 class="section__title--intro">
         Sails of <strong>Salt</strong>
     </h1>
-    <p class="section__subtitle section__subtitle--intro" data-en="Barnacle Bytes — my one-person game studio" data-de="Barnacle Bytes — mein Ein-Personen-Spielestudio">Barnacle Bytes — my one-person game studio</p>
+    <p class="section__subtitle--intro" data-en="Barnacle Bytes — my one-person game studio" data-de="Barnacle Bytes — mein Ein-Personen-Spielestudio">Barnacle Bytes — my one-person game studio</p>
     <img src="../img/sails-of-salt.png" alt="Sails of Salt key art" class="intro__img" loading="lazy" decoding="async">
 </section>
 
@@ -79,7 +79,6 @@
     <div class="portfolio-item-individual__vid-container">
         <video width="1280" height="720" controls preload="none" playsinline poster="../img/sails-of-salt-trailer.jpg" aria-label="Sails of Salt gameplay trailer">
             <source src="../img/sails-of-salt-trailer.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
     </div>
 

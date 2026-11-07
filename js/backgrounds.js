@@ -1,7 +1,8 @@
 /* Two procedural canvas backgrounds sharing one value-noise / fBm.
-   Colors are read from the active CSS variables each frame, so the
-   theme switch is picked up automatically. DPR-scaled for sharpness,
-   paused outside the viewport and under prefers-reduced-motion. */
+   Colors are read from the active CSS variables on every animated frame,
+   so a theme switch is picked up automatically. Under prefers-reduced-motion
+   the canvas is drawn once (and again on resize) instead of animating.
+   DPR-scaled for sharpness and paused outside the viewport. */
 (function () {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -41,7 +42,7 @@
 
     function setup(canvas) {
         const ctx = canvas.getContext('2d');
-        const o = { canvas, ctx, w: 1, h: 1 };
+        const o = { ctx, w: 1, h: 1 };
         o.resize = function () {
             const dpr = Math.min(window.devicePixelRatio || 1, 2);
             const r = canvas.getBoundingClientRect();
@@ -85,8 +86,7 @@
         const ctx = o.ctx, w = o.w, h = o.h;
         ctx.clearRect(0, 0, w, h);
         const accent = readRGB('--accent');
-        const base = 'rgb(' + (accent[0] | 0) + ',' + (accent[1] | 0) + ',' + (accent[2] | 0) + ')';
-        ctx.fillStyle = base;
+        ctx.fillStyle = rgba(accent, 1);
         const gap = 24;
         for (let y = gap / 2; y < h; y += gap) {
             for (let x = gap / 2; x < w; x += gap) {

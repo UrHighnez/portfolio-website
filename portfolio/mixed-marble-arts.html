@@ -15,11 +15,11 @@
         (function () {
             try {
                 var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                document.documentElement.setAttribute('data-theme', t);
+                document.documentElement.dataset.theme = t;
             } catch (e) {}
         })();
     </script>
-    <link rel="shortcut icon" href="../favicon.ico"/>
+    <link rel="icon" href="../favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,10 +50,10 @@
 <!-- Intro -->
 
 <section class="intro">
-    <h1 class="section__title section__title--intro">
+    <h1 class="section__title--intro">
         Mixed<strong>Marble Arts</strong>
     </h1>
-    <p class="section__subtitle section__subtitle--intro" data-en="How I learned to code" data-de="Wie ich coden lernte">How I learned to code</p>
+    <p class="section__subtitle--intro" data-en="How I learned to code" data-de="Wie ich coden lernte">How I learned to code</p>
     <img src="../img/mixed-marble-arts.png" alt="Mixed Marble Arts" class="intro__img" loading="lazy" decoding="async">
 </section>
 
@@ -62,8 +62,7 @@
        data-de-html="Im ersten Semester baute mein Team ein Browser-Game mit <a href='https://p5js.org/' target='_blank' rel='noopener'>p5.js</a>. Mehrere Leute steigen per Smartphone ein und steuern einen Punkt über Beschleunigungssensor und Gyroskop — Ziel: alle anderen aus der Arena werfen und als Letzte:r übrig bleiben.">In our first semester my team built a browser game with <a href="https://p5js.org/" target="_blank" rel="noopener">p5.js</a>. Several people join from their phones and steer a dot using the accelerometer and gyroscope — the goal: knock everyone else out of the arena and be the last one standing.</p>
     <div class="portfolio-item-individual__vid-container">
         <video width="320" height="240" controls>
-            <source src="../img/mixed-marble-arts-details.mp4" type="video/mp4" class="portfolio-item-individual__vid">
-            Your browser does not support the video tag.
+            <source src="../img/mixed-marble-arts-details.mp4" type="video/mp4">
         </video>
     </div>
     <p data-en="The semester's main focus was actually learning Java — design patterns, Git, computational thinking, even a text-based adventure game. Less fun to look at, so here I'm only showing the visual highlights."
@@ -73,9 +72,7 @@
        data-de="Mit p5.js habe ich dann meine eigene Version einer Mal-App gebaut — zufällige Farben, zufällige Pinselpositionen und ein Reset.">Using p5.js again, I made my own take on a painting app — randomised colours, random brush positions and a reset button.</p>
     <div class="portfolio-item-individual__vid-container">
         <video width="320" height="240" controls>
-            <source src="../img/generative-impressionator-details.mp4" type="video/mp4"
-                    class="portfolio-item-individual__vid">
-            Your browser does not support the video tag.
+            <source src="../img/generative-impressionator-details.mp4" type="video/mp4">
         </video>
     </div>
     <img src="../img/dancing-numbers.png" alt="Dancing Numbers" class="intro__img" loading="lazy" decoding="async">
@@ -83,16 +80,13 @@
        data-de="Ein Kurs zu Generative Design rundete das Semester ab. Unten siehst du, was ich für mein allererstes Code-Portfolio gemacht habe.">A Generative Design course rounded out the semester. Below is what I made for my very first coding portfolio.</p>
     <div class="portfolio-item-individual__vid-container">
         <video width="320" height="240" controls>
-            <source src="../img/dancing-numbers-details.mp4" type="video/mp4" class="portfolio-item-individual__vid">
-            Your browser does not support the video tag.
+            <source src="../img/dancing-numbers-details.mp4" type="video/mp4">
         </video>
         <video width="320" height="240" controls>
-            <source src="../img/dancing-numbers-details-2.mp4" type="video/mp4" class="portfolio-item-individual__vid">
-            Your browser does not support the video tag.
+            <source src="../img/dancing-numbers-details-2.mp4" type="video/mp4">
         </video>
         <video width="320" height="240" controls>
-            <source src="../img/dancing-numbers-details-3.mp4" type="video/mp4" class="portfolio-item-individual__vid">
-            Your browser does not support the video tag.
+            <source src="../img/dancing-numbers-details-3.mp4" type="video/mp4">
         </video>
     </div>
     <p data-en-html="My main takeaway: coding feels approachable with the right tools and guidance. For me that guidance was Daniel Shiffman, aka the <a href='https://thecodingtrain.com/' target='_blank' rel='noopener'>Coding Train</a>."

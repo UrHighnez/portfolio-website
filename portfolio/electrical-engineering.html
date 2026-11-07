@@ -15,11 +15,11 @@
         (function () {
             try {
                 var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                document.documentElement.setAttribute('data-theme', t);
+                document.documentElement.dataset.theme = t;
             } catch (e) {}
         })();
     </script>
-    <link rel="shortcut icon" href="../favicon.ico"/>
+    <link rel="icon" href="../favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,10 +50,10 @@
 <!-- Intro -->
 
 <section class="intro">
-    <h1 class="section__title section__title--intro">
+    <h1 class="section__title--intro">
         Electrical<strong>Engineering</strong>
     </h1>
-    <p class="section__subtitle section__subtitle--intro" data-en="Prototyping smart objects" data-de="Smarte Objekte prototypen">Prototyping smart objects</p>
+    <p class="section__subtitle--intro" data-en="Prototyping smart objects" data-de="Smarte Objekte prototypen">Prototyping smart objects</p>
     <img src="../img/dal-segno.jpg" alt="Dal Segno glove" class="intro__img" loading="lazy" decoding="async">
 </section>
 

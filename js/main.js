@@ -1,4 +1,4 @@
-/* Theme toggle, DE/EN language switch and the mobile nav.
+/* Theme toggle, DE/EN language switch, mobile nav and lazy looping clips.
    The initial theme is applied inline in <head> to avoid a flash. */
 (function () {
     const root = document.documentElement;
