@@ -157,14 +157,12 @@ a { color: var(--accent); text-decoration: none; }
 .hero::after { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 35%, transparent), var(--bg) 94%); }
 .stack::after { background: linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg) 55%, transparent) 45%, var(--bg)); }
 
-/* Mask-recolored social icons (recycled SVGs from /icon) */
+/* Social icons: inline SVGs (from /icon), coloured via currentColor */
 .social-icon {
     display: block;
     width: 20px;
     height: 20px;
-    background: currentColor;
-    -webkit-mask: var(--i) center / contain no-repeat;
-    mask: var(--i) center / contain no-repeat;
+    fill: currentColor;
 }
 
 /* ---------- 4. Sections ---------- */
