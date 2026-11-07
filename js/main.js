@@ -67,8 +67,33 @@
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
     }
 
+    /* ---------- Looping clips (<video data-src>): load + play only while on screen ---------- */
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const clips = document.querySelectorAll('video[data-src]');
+    if (clips.length && !reduceMotion && 'IntersectionObserver' in window) {
+        const onScreen = new Set();
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(({ target: v, isIntersecting }) => {
+                if (isIntersecting) {
+                    onScreen.add(v);
+                    if (!v.getAttribute('src')) v.src = v.dataset.src;
+                    v.play().catch(() => {});
+                } else {
+                    onScreen.delete(v);
+                    v.pause();
+                }
+            });
+        }, { rootMargin: '200px 0px' });
+        clips.forEach(v => io.observe(v));
+        // Back in the tab: restart visible clips (a play() begun in a background tab may not stick).
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) onScreen.forEach(v => v.play().catch(() => {}));
+        });
+    }
+    // Without JS, or with reduced motion, the poster frame stays as a still image.
+
     /* ---------- Reduced motion: stop autoplaying clips ---------- */
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (reduceMotion) {
         document.querySelectorAll('video[autoplay]').forEach(v => {
             v.removeAttribute('autoplay');
             v.pause();

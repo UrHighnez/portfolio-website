@@ -250,7 +250,9 @@ a { color: var(--accent); text-decoration: none; }
     color: #fff;
 }
 .featured-card > img, .featured-card > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-.featured-card:hover > img { transform: scale(1.05); }
+.featured-card:hover > img, .featured-card:hover > video { transform: scale(1.05); }
+/* Keep clips on their own GPU layer: promoting a playing video only at hover start made the zoom stutter */
+.featured-card > video { will-change: transform; }
 .featured-card .overlay {
     position: relative;
     z-index: 1;
@@ -286,8 +288,9 @@ a { color: var(--accent); text-decoration: none; }
 }
 .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 14px 40px rgba(20, 30, 28, .10); }
 .card-media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--chip); }
-.card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
-.card:hover .card-media img { transform: scale(1.05); }
+.card-media img, .card-media video { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card:hover .card-media img, .card:hover .card-media video { transform: scale(1.05); }
+.card-media video, .card:has(video) { will-change: transform; }
 .card-body { padding: 18px 20px 20px; }
 .card-title { font-family: var(--font-sans); font-weight: 600; font-size: 19px; letter-spacing: -.01em; margin: 0 0 8px; }
 .featured-card .card-title { font-size: clamp(21px, 2.6vw, 29px); }
@@ -344,6 +347,30 @@ a { color: var(--accent); text-decoration: none; }
     transition: color .2s ease, border-color .2s ease;
 }
 .footer-social a:hover { color: var(--accent); border-color: var(--accent); }
+/* Tooltip naming each link (left-aligned so it never runs off the left edge on phones) */
+.footer-social a { position: relative; }
+.footer-social a::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 8px);
+    padding: 5px 9px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: nowrap;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    box-shadow: var(--bs);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity .15s ease, transform .15s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+.footer-social a:hover::after, .footer-social a:focus-visible::after { opacity: 1; transform: none; }
 .footer-meta { margin-top: 44px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 
 /* ---------- 5. Responsive ---------- */
@@ -380,7 +407,8 @@ a { color: var(--accent); text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
     * { scroll-behavior: auto !important; }
     .cursor, .status-badge .dot { animation: none; }
-    .btn:hover, .card:hover, .featured-card:hover > img { transform: none; }
+    .btn:hover, .card:hover, .card:hover .card-media img, .card:hover .card-media video,
+    .featured-card:hover > img, .featured-card:hover > video { transform: none; }
 }
 
 /* ============================================================
